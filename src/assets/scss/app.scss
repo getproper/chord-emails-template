@@ -1,0 +1,11 @@
+// Default settings from foundation-emails
+@import 'settings/settings';
+
+// Local setting overrides
+@import 'settings';
+
+// Default styles from foundation-emails
+@import 'foundation-emails';
+
+// Local style overrides
+@import 'chord-emails';

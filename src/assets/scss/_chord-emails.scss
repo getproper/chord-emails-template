@@ -1,0 +1,108 @@
+// Custom Settings
+// ---
+//
+// Override the default foundation-emails styles here.
+//
+// It's best - and often easiest - to accomplish your needs by overriding the
+// many foundation-emails settings. That said, this file can be used to add
+// additional styles that the settings don't accommodate. (Hint: you may find
+// youself needing to use !important.)
+//
+// @see https://get.foundation/emails/docs/
+
+// The following overrides are just an example. Do with them as you wish.
+// @see https://gist.github.com/aamyot/f8d323600efd4d220e7a302ec1697c87
+
+.container {
+  width: 100% !important;
+  max-width: $global-width !important;
+}
+
+center {
+  width: auto !important;
+  min-width: auto !important;
+}
+
+.order-details {
+  width: 175px !important;
+}
+
+.header .container,
+.footer .container {
+  .columns {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+h4 {
+  a {
+    text-decoration: underline;
+  }
+}
+
+a {
+  font-family: inherit;
+}
+
+.social {
+  img {
+    height: 33px;
+  }
+}
+
+.legal {
+  font-size: 8px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+// The following overrides are just an example. They were pulled from the Custom
+// Styles field defaults in Contentful. Do with them as you wish.
+
+.body {
+  background-color: #00594f !important;
+}
+
+h3, h4, p, a, span {
+  color: #FBFAF7 !important;
+}
+
+.container {
+  background-color: #00594f !important;
+}
+
+.main,
+.main .container {
+  background-color: #FEFEFE !important;
+}
+
+.main p,
+.main .container p {
+  color: #0A0A0A !important;
+}
+
+.main h4,
+.main .container h4 {
+  color: #00594f !important;
+}
+
+.logo {
+  height: 44px !important;
+}
+
+.order-summary-columns {
+  padding-bottom: 0 !important;
+}
+
+.shipping-columns p {
+  margin-bottom: 0px !important;
+}
+
+.footer hr {
+  border: 1px solid #47d7ac !important;
+  border-bottom: none !important;
+}
