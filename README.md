@@ -1,5 +1,9 @@
 # Chord Email Templates
 
+Special thanks to [Gus Childs](https://github.com/guschilds) for creating this awesome tool.  The original code can be found [here](https://github.com/guschilds/chord-emails-template).
+
+## Overview
+
 A tool to help implement and test customizations to Chord email templates.
 
 If you can achieve your needs by overriding a few styles within the Contentful
