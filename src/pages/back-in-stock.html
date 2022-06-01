@@ -1,0 +1,90 @@
+---
+subject: Changed Your Mind? No Problem
+ship_address:
+  full_name: John Doe
+  firstname: John
+  lastname: Doe
+  address1: 12345 Street Rd
+  address2: Unit 1
+  city: San Francisco
+  state: CA
+  zipcode: 12345
+number: ORDER-0123456789
+item_total: $124.00
+tax_total: $0.00
+shipment_total: FREE
+store_credit_applied: $0.00
+promo_total: -$18.60
+order_total_after_store_credit: $105.40
+shipping_method: Standard shipping
+line_items:
+  - image: https://placekitten.com/48/48
+    name: A Product
+    quantity: 2
+    price: $62.00
+  - image: https://placekitten.com/48/48
+    name: Another Product
+    quantity: 1
+    price: $48.00
+---
+
+<wrapper class="header">
+  <container>
+     {{> header}}
+     <row>
+        <columns>
+           <spacer size="16"></spacer>
+           <h3 class="">
+              Hey, Good News!
+           </h3>
+           <p class="">
+              {{name}} is now back in stock.
+           </p>
+        </columns>
+     </row>
+  </container>
+</wrapper>
+<container class="main">
+  <row>
+     <columns>
+        <spacer size="16"></spacer>
+        <h4 class="">Your Cart</h4>
+     </columns>
+  </row>
+  <row>
+     <columns>
+        <p><strong>SKU</strong> {{sku}}</p>
+        <table>
+           <tr>
+              <td>
+                 <img src="{{image}}" class="img-thumbnail">
+              </td>
+              <td>
+                 <table class="details">
+                    <tr>
+                       <td><strong>{{name}}</strong></td>
+                    </tr>
+                 </table>
+              </td>
+              <td class="text-right">{{cost}}</td>
+           </tr>
+        </table>
+        <spacer size=\"16\"></spacer>
+        <table>
+           <tr>
+              <td>{{product_description}}</td>
+           </tr>
+        </table>
+        <spacer size="16"></spacer>
+        <hr class='separator' />
+        <spacer size="15"></spacer>
+  </row>
+  <row>
+  <columns class='url-columns'>
+  <a class="button" href="{{& url }}">Shop now!</a>
+  </columns>
+  </row>
+  </columns>
+</container>
+
+{{> footer}}

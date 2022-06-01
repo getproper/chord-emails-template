@@ -1,5 +1,5 @@
 ---
-subject: Your Order Is Confirmed!
+subject: Changed Your Mind? No Problem
 ship_address:
   full_name: John Doe
   firstname: John
@@ -29,31 +29,36 @@ line_items:
 ---
 
 <div style="font-size:0px;line-height:1px;mso-line-height-rule:exactly;display:none;max-width:0px;max-height:0px;opacity:0;overflow:hidden;mso-hide:all;">
-  Get ready to get better sleep.
-</div>
+  You're SO close to better sleep!
+  </div>
   <wrapper class="header">
-    <container class="main">
-  
+    <container>
       {{> header}}
   
       <row>
         <columns>
-          <spacer size="16"></spacer>
-          <h3 class="">
-            Get ready to get better sleep
-          </h3>
-          <p class="">
-            Your order is confirmed, {{ship_address.firstname}}. We'll email you when your PhD-developed formulation is out for delivery. <br>
+          {{#ship_address}}
+            <spacer size="16"></spacer>
+            <h3>
+              You're SO close to better sleep
+            </h3>
+          {{/ship_address}}
+  
+          <p>
+            164 million Americans suffer from sleep issues once a week. You don’t have to. <br><br> Click below to complete your purchase and get started on your journey towards long-term sleep health.
           </p>
         </columns>
       </row>
     </container>
   </wrapper>
+  
+  <spacer size="26"></spacer>
+  
   <container class="main">
     <row>
       <columns>
-        <spacer size="16"></spacer>
-        <h4 class=""><strong>Order Details</strong></h4>
+        <spacer size="35"></spacer>
+        <h4 class=""><em>Continue Shopping</em></h4>
       </columns>
     </row>
     <row>
@@ -129,7 +134,7 @@ line_items:
               <p>Tax</p>
             </columns>
             <columns class='order-summary-columns'>
-              <p class='text-right'>{{tax_total}}</p>
+              <p class='text-right'>(To be calculated)</p>
             </columns>
           </row>
           {{#promo_total}}
@@ -174,31 +179,37 @@ line_items:
         <spacer size="15"></spacer>
   
         <container>
-          <row>
-            <columns class='shipping-columns'>
-              <p><b>Shipping To:</b></p>
-              <p>
-              {{ship_address.fullname}}<br/>
-              {{ship_address.address1}}<br/>
-              {{#ship_address.address2}}
-                {{ship_address.address2}}<br/>
-              {{/ship_address.address2}}
-              {{ship_address.city}},
-              {{ship_address.state}}
-              {{ship_address.zipcode}}
-              </p>
-            </columns>
-          </row>
+          {{#ship_address}}
+            <row>
+              <columns class='shipping-columns'>
+                <p><b>Shipping To:</b></p>
+                <p>
+                {{ship_address.fullname}}<br/>
+                {{ship_address.address1}}<br/>
+                {{#ship_address.address2}}
+                  {{ship_address.address2}}<br/>
+                {{/ship_address.address2}}
+                {{ship_address.city}},
+                {{ship_address.state}}
+                {{ship_address.zipcode}}
+                </p>
+              </columns>
+            </row>
+          {{/ship_address}}
           <row>
             <columns class='shipping-columns'>
               <p><b>Shipping Method</b></p>
               <p>{{shipping_method}}</p>
             </columns>
           </row>
+          <row>
+            <columns class='cart-columns'>
+              <a href="{{& cart_url }}">Continue Shopping</a>
+            </columns>
+          </row>
         </container>
-      </columns>
-    </row>
+      </row>
+    </columns>
   </container>
   
   {{> footer}}
-  

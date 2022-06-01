@@ -1,5 +1,5 @@
 ---
-subject: Your Order Is Confirmed!
+subject: Your State Of Shipment is On Its Way
 ship_address:
   full_name: John Doe
   firstname: John
@@ -26,36 +26,54 @@ line_items:
     name: Another Product
     quantity: 1
     price: $48.00
+first_package_tracking:
+  url: http://example.com
+trackings:
+  - url: http://example.com
+    number: 0123456789
+  - number: 9876543210
+shipped_on: 3/13/21
 ---
 
 <div style="font-size:0px;line-height:1px;mso-line-height-rule:exactly;display:none;max-width:0px;max-height:0px;opacity:0;overflow:hidden;mso-hide:all;">
-  Get ready to get better sleep.
-</div>
+  Here comes another month of better sleep!
+  </div>
   <wrapper class="header">
-    <container class="main">
-  
+    <container>
       {{> header}}
   
       <row>
         <columns>
           <spacer size="16"></spacer>
           <h3 class="">
-            Get ready to get better sleep
+            Here comes another month of better sleep
           </h3>
           <p class="">
-            Your order is confirmed, {{ship_address.firstname}}. We'll email you when your PhD-developed formulation is out for delivery. <br>
+            Your Proper delivery is on its way. As a reminder, Proper's refill capsules come in recyclable, food-grade safe pouches. All you have to do is open the pouch and empty its contents into your reusable glass bottle. 
           </p>
         </columns>
       </row>
     </container>
   </wrapper>
+  
+  <spacer size="26"></spacer>
+  
+  <wrapper class="header">
+    <container>
+      {{#shipments}}
+        <row>
+          <columns>
+            {{#tracking_url}}
+              <a href="{{tracking_url}}" class="button radius">Track my Shipment</a>
+            {{/tracking_url}}
+          </columns>
+        </row>
+        <spacer size="10"></spacer>
+      {{/shipments}}
+    </container>
+  </wrapper>
+  
   <container class="main">
-    <row>
-      <columns>
-        <spacer size="16"></spacer>
-        <h4 class=""><strong>Order Details</strong></h4>
-      </columns>
-    </row>
     <row>
       <columns>
         <p><strong>Order Number:</strong> {{number}}</p>
@@ -110,7 +128,7 @@ line_items:
             </tr>
           <spacer size="16"></spacer>
         {{/line_items}}
-        </table>
+         </table>
   
         <hr class='separator'>
   
@@ -196,8 +214,25 @@ line_items:
             </columns>
           </row>
         </container>
-      </columns>
-    </row>
+  
+        {{#shipments}}
+        <container>
+          <row>
+            <columns class="shipping-columns">
+              <p><strong>Tracking Number(s)</stong></p>
+              <a href="{{tracking_url}}">{{number}}</a>
+            </columns>
+          </row>
+          <row>
+            <columns class="shipping-columns">
+              <p><strong>Shipped On:</strong></p>
+              <p>{{shipped_at}}</p>
+            </columns>
+          </row>
+        </container>
+        {{/shipments}}
+      </row>
+    </columns>
   </container>
   
   {{> footer}}

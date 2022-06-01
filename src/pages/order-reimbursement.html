@@ -6,145 +6,78 @@ reimbursement_total: $42.00
 updated_order_total: $82.00
 ---
 
-<wrapper class="header">
-  <container>
-    <row>
-      <columns>
-        <center>
-          <img class="logo" src="https://your.site.com/your-logo.png" />
-        </center>
-        <spacer size="26"></spacer>
-      </columns>
-    </row>
-
-    <row>
-      <columns>
-        <h3 class="text-center">
-          We received your request and have updated your order info.
-        </h3>
-        <p class="text-center">
-          We’re sorry to hear you weren’t satisfied with your recent purchase. We’ve made the necessary adjustments and have reimbursed you for the requested item(s), detailed below:
-        </p>
-      </columns>
-    </row>
-  </container>
-</wrapper>
-
-<spacer size="26"></spacer>
-
-<container class="main">
-  <row>
-    <columns>
-      <spacer size="35"></spacer>
-      <h4 class="text-center"><em>Your Order</em></h4>
-    </columns>
-  </row>
-  <row>
-    <columns>
-      <p><strong>Order Number:</strong> {{number}}</p>
-
-      <hr class='separator'>
-      <spacer size='20'></spacer>
-
-      <container>
-        <row class='order-summary-row'>
-          <columns class='order-summary-columns'>
-            <p>Order Total</</p>
-          </columns>
-          <columns class='order-summary-columns'>
-            <p class='text-right'>{{order_total}}</p>
-          </columns>
-        </row>
-
-        <row class='order-summary-row'>
-          <columns class='order-summary-columns'>
-            <p>Refund Total</p>
-          </columns>
-          <columns class='order-summary-columns'>
-            <p class='text-right'>{{reimbursement_total}}</p>
-          </columns>
-        </row>
-
-        <row class='order-summary-row'>
-          <columns class='order-summary-columns'>
-            <p><strong>Updated Order Total</strong></p>
-          </columns>
-          <columns class='order-summary-columns'>
-            <p class='text-right'>{{updated_order_total}}</p>
-          </columns>
-        </row>
-      </container>
-    </row>
-  </columns>
-</container>
-
-  <wrapper class="footer">
+<div style="font-size:0px;line-height:1px;mso-line-height-rule:exactly;display:none;max-width:0px;max-height:0px;opacity:0;overflow:hidden;mso-hide:all;">
+  Your $$$ is on its way.
+  </div>
+  <wrapper class="header">
     <container>
+      {{> header}}
+  
       <row>
         <columns>
-          <spacer size="50"></spacer>
-          <p class='text-center'>Your refund will be applied via your method of payment in 1-3 business days. If you need anything else, we're always here for you at hello@example.com.</p>
+          <spacer size="16"></spacer>
+          <h3 class="">
+            Your refund is on its way
+          </h3>
+          <p class="">
+            We’re writing to confirm that your Proper refund has officially been processed. Scroll down for more info, and don’t hesitate to contact us with any questions at care@getproper.com.<br><br>
+  
+  Sleep well,<br>
+  The Proper team
+  
+          </p>
         </columns>
       </row>
-      <hr />
     </container>
   </wrapper>
-
-<wrapper class="footer">
-  <container>
+  
+  <spacer size="26"></spacer>
+  
+  <container class="main">
     <row>
       <columns>
-        <spacer size="50"></spacer>
-        <h3 class="text-center">Lorem ipsum dolor sit amet.</h3>
-        <spacer size="40"></spacer>
-        <hr />
+        <spacer size="35"></spacer>
+        <h4 class=""><strong>Refund Details</strong></h4>
       </columns>
     </row>
-
     <row>
       <columns>
-        <h4 class="text-center">
-          <small>Something not right with your order?<br />
-            <em>Reach out to us at <a href="mailto:hello@example.com">hello@example.com</a>.</em>
-          </small>
-        </h4>
-      </columns>
-    </row>
-
-    <row>
-      <columns>
-        <center>
-          <menu class="social">
-            <item href="https://www.facebook.com" target="_blank">
-              <img src="facebook.png" />
-            </item>
-            <item href="https://www.instagram.com" target="_blank">
-              <img src="instagram.png" />
-            </item>
-            <item href="https://www.pinterest.com" target="_blank">
-              <img src="pinterest.png" />
-            </item>
-          </menu>
-        </center>
-      </columns>
-    </row>
-
-    <row>
-      <columns>
-        <center>
-          <div class="legal">
-            <span>
-              <a href="https://your.site.com/privacy-policy">Privacy Policy</a>
-            </span>
-            <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-            <span>
-              <a href="https://your.site.com/terms">Terms of Use</a>
-            </span>
-            <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-            <span>&copy; 2020</span>
-      </div>
-    </center>
-  </columns>
-</row>
+        <p><strong>Order Number:</strong> {{number}}</p>
+  
+        <hr class='separator'>
+        <spacer size='20'></spacer>
+  
+        <container>
+          <row class='order-summary-row'>
+            <columns class='order-summary-columns'>
+              <p>Order Total</</p>
+            </columns>
+            <columns class='order-summary-columns'>
+              <p class='text-right'>{{order_total}}</p>
+            </columns>
+          </row>
+  
+          <row class='order-summary-row'>
+            <columns class='order-summary-columns'>
+              <p>Refund Total</p>
+            </columns>
+            <columns class='order-summary-columns'>
+              <p class='text-right'>{{reimbursement_total}}</p>
+            </columns>
+          </row>
+  
+          <row class='order-summary-row'>
+            <columns class='order-summary-columns'>
+              <p><strong>Updated Order Total</strong></p>
+            </columns>
+            <columns class='order-summary-columns'>
+              <p class='text-right'>{{updated_order_total}}</p>
+            </columns>
+          </row>
+        </container>
+      </row>
+    </columns>
   </container>
-</wrapper>
+  
+  {{> footer}}
+  
